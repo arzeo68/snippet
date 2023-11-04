@@ -1,11 +1,40 @@
 
 {
     "all": [
+            {
+                "label": "For loop",
+                "description": "For loop incrementing from 0 to count",
+                "snippet": [
+                    "for (int i = 0; i < ${1:count}; i++) {",
+                    "\t${2:/* code */}",
+                    "}"
+                ]
+            },
+            {
+                "label": "Reverse For loop",
+                "description": "For loop incrementing from 0 to count",
+                "snippet": [
+                    "for (int i = ${1:count}; i >= 0; i--) {",
+                    "\t${2:/* code */}",
+                    "}"
+                ]
+            },
+            {
+                "label": "For Each Loop",
+                "description": "Iterate over an array using forEach",
+                "snippet": [
+                    "${1:array}.forEach(item => {",
+                    "\t${2:/* code */}",
+                    "});"
+                ]
+            }
+    ],
+    "JavaScript": [
         {
             "label": "For loop",
             "description": "For loop incrementing from 0 to count",
             "snippet": [
-                "for (int i = 0; i < ${1:count}; i++) {",
+                "for (let i = 0; i < ${1:count}; i++) {",
                 "\t${2:/* code */}",
                 "}"
             ]
@@ -14,10 +43,54 @@
             "label": "Reverse For loop",
             "description": "For loop incrementing from 0 to count",
             "snippet": [
-                "for (int i = ${1:count}; i >= 0; i--) {",
+                "for (let i = ${1:count}; i >= 0; i--) {",
                 "\t${2:/* code */}",
                 "}"
             ]
+        },
+        {
+            "label": "For Each Loop",
+            "description": "Iterate over an array using forEach",
+            "snippet": [
+                "${1:array}.forEach(item => {",
+                "\t${2:/* code */}",
+                "});"
+            ]
+        },
+        {
+            "label": "Function Declaration",
+            "description": "Create a function",
+            "snippet": [
+                "function ${1:functionName}(${2:parameters}) {",
+                "\t${3:/* code */}",
+                "}"
+            ]
+        },
+        {
+            "label": "Arrow Function",
+            "description": "Create an arrow function",
+            "snippet": [
+                "const ${1:functionName} = (${2:parameters}) => {",
+                "\t${3:/* code */}",
+                "};"
+            ]
+        },
+        {
+            "label": "Switch Statement",
+            "description": "Switch statement with cases",
+            "snippet": [
+                "switch (${1:expression}) {",
+                "\tcase ${2:value1}:",
+                "\t\t${3:/* code for case 1 */}",
+                "\t\tbreak;",
+                "\tcase ${4:value2}:",
+                "\t\t${5:/* code for case 2 */}",
+                "\t\tbreak;",
+                "\tdefault:",
+                "\t\t${6:/* default code */}",
+                "}"
+            ]
         }
+        
     ]
 }
