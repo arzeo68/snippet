@@ -1,0 +1,25 @@
+
+{
+    "all": [
+        [
+            {
+                "name": "For loop",
+                "description": "For loop incrementing from 0 to count",
+                "snippet": [
+                    "for (int i = 0; i < ${1:count}; i++) {",
+                    "\t${2:/* code */}",
+                    "}"
+                ]
+            },
+            {
+                "name": "Reverse For loop",
+                "description": "For loop incrementing from 0 to count",
+                "snippet": [
+                    "for (int i = ${1:count}; i >= 0; i--) {",
+                    "\t${2:/* code */}",
+                    "}"
+                ]
+            }
+        ]
+    ]
+}
