@@ -3,7 +3,7 @@
     "all": [
         [
             {
-                "name": "For loop",
+                "label": "For loop",
                 "description": "For loop incrementing from 0 to count",
                 "snippet": [
                     "for (int i = 0; i < ${1:count}; i++) {",
@@ -12,7 +12,7 @@
                 ]
             },
             {
-                "name": "Reverse For loop",
+                "label": "Reverse For loop",
                 "description": "For loop incrementing from 0 to count",
                 "snippet": [
                     "for (int i = ${1:count}; i >= 0; i--) {",
