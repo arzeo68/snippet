@@ -47,6 +47,13 @@
             ]
         },
         {
+            "label": "Print error",
+            "description": "console error message",
+            "snippet": [
+                "console.error($TM_FILENAME  ${1:/* message */});"
+            ]
+        },
+        {
             "label": "Switch Statement",
             "description": "Switch statement with cases",
             "snippet": [
