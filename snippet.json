@@ -266,9 +266,9 @@
             "label": "for",
             "description": "Code snippet for 'for' loop",
             "snippet": [
-                "for (${size_t} ${i} = ${1:0}; ${i} < ${2:length}; ${i}++)",
+                "for (int i = 0; i < ${1:lengt}; i++)",
                 "{",
-                "\t$3",
+                "\t$2",
                 "}"
             ]
         },
@@ -276,9 +276,9 @@
             "label": "forr",
             "description": "Code snippet for reverse 'for' loop",
             "snippet": [
-                "for (int ${i} = ${1:length} - 1; ${i} >= ${2:0}; ${i}--)",
+                "for (int i = ${1:length} - 1; i >= 0; i--)",
                 "{",
-                "\t$3",
+                "\t$2",
                 "}"
             ]
         },
@@ -306,9 +306,9 @@
             "label": "foreach",
             "description": "Code snippet for range-based for loop (c++11) statement",
             "snippet": [
-                "for(auto ${var} : ${collection_to_loop})",
+                "for(auto $1 : $2)",
                 "{",
-                "\t$1",
+                "\t$3",
                 "}"
             ]
         },
@@ -346,35 +346,28 @@
             "label": "enum",
             "description": "Code snippet for enum",
             "snippet": [
-                "enum ${MyEnum}",
+                "enum $1",
                 "{",
-                "\t$1",
+                "\t$2",
                 "};"
-            ]
-        },
-        {
-            "label": "enum class",
-            "description": "Code snippet for enum class (c++11)",
-            "snippet": [
-                "enum class ${MyClass} { };"
             ]
         },
         {
             "label": "class",
             "description": "Code snippet for class",
             "snippet": [
-		"class $1 {",
-		"public:",
-		"\t$1();",
-		"\t$1($1 &&) = default;",
-		"\t$1(const $1 &) = default;",
-		"\t$1 &operator=($1 &&) = default;",
-		"\t$1 &operator=(const $1 &) = default;",
-		"\t~$1();",
-		"",
-		"private:",
-		"};",
-	    ]
+                "class $1 {",
+                "public:",
+                "\t$1();",
+                "\t$1($1 &&) = default;",
+                "\t$1(const $1 &) = default;",
+                "\t$1 &operator=($1 &&) = default;",
+                "\t$1 &operator=(const $1 &) = default;",
+                "\t~$1();",
+                "",
+                "private:",
+                "};"
+            ]
         },
         {
             "label": "classi",
@@ -399,9 +392,9 @@
             "label": "interface",
             "description": "Code snippet for interface (Visual C++)",
             "snippet": [
-                "__interface I${Interface}",
+                "interface I$1",
                 "{",
-                "\t$1",
+                "\t$2",
                 "};"
             ]
         },
@@ -409,9 +402,9 @@
             "label": "namespace",
             "description": "Code snippet for namespace",
             "snippet": [
-                "namespace ${MyNamespace}",
+                "namespace $1",
                 "{",
-                "\t$1",
+                "\t$2",
                 "}"
             ]
         },
@@ -419,16 +412,16 @@
             "label": "#ifdef",
             "description": "Code snippet for #ifdef",
             "snippet": [
-                "#ifdef ${DEBUG}",
-                "$1",
-                "#endif // ${DEBUG}"
+                "#ifdef $1",
+                "$2",
+                "#endif // $1"
             ]
         },
         {
             "label": "#ifndef",
             "description": "Code snippet for #ifndef",
             "snippet": [
-                "#ifndef ${1:1}",
+                "#ifndef $1",
                 "$2",
                 "#endif // !$1"
             ]
@@ -437,7 +430,7 @@
             "label": "#if",
             "description": "Code snippet for #if",
             "snippet": [
-                "#ifdef ${1:0}",
+                "#ifdef $1",
                 "$2",
                 "#endif // $1"
             ]
@@ -446,9 +439,9 @@
             "label": "struct",
             "description": "Code snippet for struct",
             "snippet": [
-                "struct ${MyStruct}",
+                "struct $1",
                 "{",
-                "\t$1",
+                "\t$2",
                 "};"
             ]
         },
@@ -456,10 +449,10 @@
             "label": "switch",
             "description": "Code snippet for switch statement",
             "snippet": [
-                "switch (${switch_on})",
+                "switch ($1)",
                 "{",
                 "default:",
-                "\tbreak;$1",
+                "\tbreak;$2",
                 "}"
             ]
         },
@@ -481,9 +474,9 @@
             "label": "union",
             "description": "Code snippet for union",
             "snippet": [
-                "union ${MyUnion}",
+                "union $1",
                 "{",
-                "\t$1",
+                "\t$2",
                 "};"
             ]
         },
