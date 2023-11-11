@@ -55,7 +55,7 @@
         "description": "console error message",
         "language": "javascript,typescript",
         "snippet": [
-            "console.error(\"$TM_FILENAME  ${1:/* message */}\");"
+            "console.error(\"[$TM_FILENAME l.$TM_LINE_NUMBER]:  ${1:/* message */}\");"
         ]
     },
     {
@@ -73,6 +73,405 @@
             "\tdefault:",
             "\t\t${6:/* default code */}",
             "}"
+        ]
+    },
+    {
+        "label": "for",
+        "description": "Code snippet for 'for' loop",
+        "language": "cpp",
+        "snippet": [
+            "for (int i = 0; i < ${1:lengt}; i++)",
+            "{",
+            "\t$2",
+            "}"
+        ]
+    },
+    {
+        "label": "forr",
+        "description": "Code snippet for reverse 'for' loop",
+        "language": "cpp",
+        "snippet": [
+            "for (int i = ${1:length} - 1; i >= 0; i--)",
+            "{",
+            "\t$2",
+            "}"
+        ]
+    },
+    {
+        "label": "do",
+        "description": "Code snippet for do...while loop",
+        "language": "cpp",
+        "snippet": [
+            "do",
+            "{",
+            "\t$1",
+            "} while($2);"
+        ]
+    },
+    {
+        "label": "while",
+        "description": "Code snippet for while loop",
+        "language": "cpp",
+        "snippet": [
+            "while ($1)",
+            "{",
+            "\t$2",
+            "}"
+        ]
+    },
+    {
+        "label": "foreach",
+        "description": "Code snippet for range-based for loop (c++11) statement",
+        "language": "cpp",
+        "snippet": [
+            "for(auto $1 : $2)",
+            "{",
+            "\t$3",
+            "}"
+        ]
+    },
+    {
+        "label": "if",
+        "description": "Code snippet for if statement",
+        "language": "cpp",
+        "snippet": [
+            "if ($1)",
+            "{",
+            "\t$2",
+            "}"
+        ]
+    },
+    {
+        "label": "else",
+        "description": "Code snippet for else statement",
+        "language": "cpp",
+        "snippet": [
+            "else",
+            "{",
+            "\t$1",
+            "}"
+        ]
+    },
+    {
+        "label": "else if",
+        "description": "Code snippet for else-if statement",
+        "language": "cpp",
+        "snippet": [
+            "else if ($1)",
+            "{",
+            "\t$2",
+            "}"
+        ]
+    },
+    {
+        "label": "enum",
+        "description": "Code snippet for enum",
+        "language": "cpp",
+        "snippet": [
+            "enum $1",
+            "{",
+            "\t$2",
+            "};"
+        ]
+    },
+    {
+        "label": "class",
+        "description": "Code snippet for class",
+        "language": "cpp",
+        "snippet": [
+            "class $1 {",
+            "public:",
+            "\t$1();",
+            "\t$1($1 &&) = default;",
+            "\t$1(const $1 &) = default;",
+            "\t$1 &operator=($1 &&) = default;",
+            "\t$1 &operator=(const $1 &) = default;",
+            "\t~$1();",
+            "",
+            "private:",
+            "};"
+        ]
+    },
+    {
+        "label": "classi",
+        "description": "Code snippet for class with inline constructor/destructor",
+        "language": "cpp",
+        "snippet": [
+            "class $1",
+            "{",
+            "public:",
+            "\t$1() = default;",
+            "\t$1($1 &&) = default;",
+            "\t$1(const $1 &) = default;",
+            "\t$1 &operator=($1 &&) = default;",
+            "\t$1 &operator=(const $1 &) = default;",
+            "\t~$1() = default;",
+            "",
+            "private:",
+            "\t$1",
+            "};"
+        ]
+    },
+    {
+        "label": "interface",
+        "description": "Code snippet for interface (Visual C++)",
+        "language": "cpp",
+        "snippet": [
+            "interface I$1",
+            "{",
+            "\t$2",
+            "};"
+        ]
+    },
+    {
+        "label": "namespace",
+        "description": "Code snippet for namespace",
+        "language": "cpp",
+        "snippet": [
+            "namespace $1",
+            "{",
+            "\t$2",
+            "}"
+        ]
+    },
+    {
+        "label": "#ifdef",
+        "description": "Code snippet for #ifdef",
+        "language": "cpp",
+        "snippet": [
+            "#ifdef $1",
+            "$2",
+            "#endif // $1"
+        ]
+    },
+    {
+        "label": "#ifndef",
+        "description": "Code snippet for #ifndef",
+        "language": "cpp",
+        "snippet": [
+            "#ifndef $1",
+            "$2",
+            "#endif // !$1"
+        ]
+    },
+    {
+        "label": "#if",
+        "description": "Code snippet for #if",
+        "language": "cpp",
+        "snippet": [
+            "#ifdef $1",
+            "$2",
+            "#endif // $1"
+        ]
+    },
+    {
+        "label": "struct",
+        "description": "Code snippet for struct",
+        "language": "cpp",
+        "snippet": [
+            "struct $1",
+            "{",
+            "\t$2",
+            "};"
+        ]
+    },
+    {
+        "label": "switch",
+        "description": "Code snippet for switch statement",
+        "language": "cpp",
+        "snippet": [
+            "switch ($1)",
+            "{",
+            "default:",
+            "\tbreak;$2",
+            "}"
+        ]
+    },
+    {
+        "label": "try",
+        "description": "Code snippet for try catch",
+        "language": "cpp",
+        "snippet": [
+            "try",
+            "{",
+            "\t",
+            "}",
+            "catch (const std::exception&)",
+            "{",
+            "\t$1",
+            "}"
+        ]
+    },
+    {
+        "label": "union",
+        "description": "Code snippet for union",
+        "language": "cpp",
+        "snippet": [
+            "union $1",
+            "{",
+            "\t$2",
+            "};"
+        ]
+    },
+    {
+        "label": "cout",
+        "description": "Code snippet for printing to std::cout, provided the header is set",
+        "language": "cpp",
+        "snippet": [
+            "std::cout << \"${1:/* message */}\" << std::endl;"
+        ]
+    },
+    {
+        "label": "#inc",
+        "description": "Code snippet for #include \" \"",
+        "language": "cpp",
+        "snippet": [
+            "#include \"$1\""
+        ]
+    },
+    {
+        "label": "#inc<",
+        "description": "Code snippet for #include \" \"",
+        "language": "cpp",
+        "snippet": [
+            "#include <$1>"
+        ]
+    },
+    {
+        "label": "#def",
+        "description": "Code snippet for #define \" \"",
+        "language": "cpp",
+        "snippet": [
+            "#define \"$1\" \"$2\" "
+        ]
+    },
+    {
+        "label": "main",
+        "description": "Code snippet for main function",
+        "language": "cpp",
+        "snippet": [
+            "int main(int argc, const char** argv) {",
+            "    return 0;",
+            "}"
+        ]
+    },
+    {
+        "label": "For loop",
+        "description": "For loop incrementing from 0 to count",
+        "language": "python",
+        "snippet": [
+            "for i in range(${1:count}):",
+            "\t${2:/* code */}"
+        ]
+    },
+    {
+        "label": "Reverse For loop",
+        "description": "For loop incrementing from 0 to count",
+        "language": "python",
+        "snippet": [
+            "for i in range(${1:count}, 0, -1):",
+            "\t${2:/* code */}"
+        ]
+    },
+    {
+        "label": "For Each Loop",
+        "description": "Iterate over an array using forEach",
+        "language": "python",
+        "snippet": [
+            "for item in ${1:array}:",
+            "\t${2:/* code */}"
+        ]
+    },
+    {
+        "label": "Function Declaration",
+        "description": "Create a function",
+        "language": "python",
+        "snippet": [
+            "def ${1:functionName}(${2:parameters}):",
+            "\t${3:/* code */}"
+        ]
+    },
+    {
+        "label": "Print",
+        "description": "Print to console",
+        "language": "python",
+        "snippet": [
+            "print(${1:/* message */})"
+        ]
+    },
+    {
+        "label": "Switch Statement",
+        "description": "Switch statement with cases",
+        "language": "python",
+        "snippet": [
+            "switch (${1:expression}) {",
+            "\tcase ${2:value1}:",
+            "\t\t${3:/* code for case 1 */}",
+            "\t\tbreak;",
+            "\tcase ${4:value2}:",
+            "\t\t${5:/* code for case 2 */}",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\t${6:/* default code */}",
+            "}"
+        ]
+    },
+    {
+        "label": "Class",
+        "description": "Create a class",
+        "language": "python",
+        "snippet": [
+            "class ${1:className}:",
+            "\t${2:/* code */}"
+        ]
+    },
+    {
+        "label": "Exception handling",
+        "description": "Try catch block",
+        "language": "python",
+        "snippet": [
+            "try:",
+            "\t${1:/* code */}",
+            "except ${2:Exception}:",
+            "\t${3:/* code */}"
+        ]
+    },
+    {
+        "label": "Regular Expression match",
+        "description": "Check if string matches pattern",
+        "language": "python",
+        "snippet": [
+            "import re",
+            "re.match(${1:pattern}, ${2:string})"
+        ]
+    },
+    {
+        "label": "Regular Expression search",
+        "description": "Search string for pattern",
+        "language": "python",
+        "snippet": [
+            "import re",
+            "re.search(${1:pattern}, ${2:string})"
+        ]
+    },
+    {
+        "label": "Generate random number",
+        "description": "Generate random number",
+        "language": "python",
+        "snippet": [
+            "import random",
+            "random.randint(${1:lower}, ${2:upper})"
+        ]
+    },
+    {
+        "label": "AWS Lambda Handler",
+        "description": "AWS Lambda Handler with boto3",
+        "language": "python",
+        "snippet": [
+            "import boto3",
+            "",
+            "def lambda_handler(event, context):",
+            "\t${1:/* code */}"
         ]
     }
 ]
